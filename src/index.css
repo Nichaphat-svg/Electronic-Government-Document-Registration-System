@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 220 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 15%;
+
+    --primary: 215 70% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 25% 92%;
+    --secondary-foreground: 220 30% 25%;
+
+    --muted: 210 20% 94%;
+    --muted-foreground: 220 15% 45%;
+
+    --accent: 215 60% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 25% 88%;
+    --input: 214 25% 88%;
+    --ring: 215 70% 35%;
+
+    --radius: 0.625rem;
+
+    /* Custom colors for urgency */
+    --urgent-critical: 0 72% 35%;
+    --urgent-high: 0 65% 55%;
+    --urgent-medium: 45 90% 50%;
+    --urgent-normal: 145 60% 40%;
+
+    /* Chart colors */
+    --chart-1: 215 70% 35%;
+    --chart-2: 215 60% 45%;
+    --chart-3: 145 60% 40%;
+    --chart-4: 45 90% 50%;
+    --chart-5: 0 65% 55%;
+
+    /* Sidebar */
+    --sidebar-background: 215 70% 25%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 215 70% 25%;
+    --sidebar-accent: 215 60% 35%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 215 60% 35%;
+    --sidebar-ring: 0 0% 100%;
+  }
+
+  .dark {
+    --background: 220 25% 10%;
+    --foreground: 210 20% 95%;
+
+    --card: 220 25% 14%;
+    --card-foreground: 210 20% 95%;
+
+    --popover: 220 25% 14%;
+    --popover-foreground: 210 20% 95%;
+
+    --primary: 215 70% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 20% 22%;
+    --secondary-foreground: 210 20% 90%;
+
+    --muted: 220 20% 18%;
+    --muted-foreground: 215 15% 60%;
+
+    --accent: 215 60% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 22%;
+    --input: 220 20% 22%;
+    --ring: 215 70% 50%;
+
+    --sidebar-background: 220 25% 8%;
+    --sidebar-foreground: 210 20% 95%;
+    --sidebar-primary: 215 70% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 18%;
+    --sidebar-accent-foreground: 210 20% 95%;
+    --sidebar-border: 220 20% 18%;
+    --sidebar-ring: 215 70% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-kanit antialiased;
+  }
+}
+
+@layer utilities {
+  .urgency-critical {
+    @apply bg-[hsl(var(--urgent-critical))] text-white;
+  }
+  
+  .urgency-high {
+    @apply bg-[hsl(var(--urgent-high))] text-white;
+  }
+  
+  .urgency-medium {
+    @apply bg-[hsl(var(--urgent-medium))] text-foreground;
+  }
+  
+  .urgency-normal {
+    @apply bg-[hsl(var(--urgent-normal))] text-white;
+  }
+}
